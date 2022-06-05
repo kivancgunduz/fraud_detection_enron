@@ -5,7 +5,7 @@ import streamlit as st
 @st.cache
 def load_dfs_in_cache():
     # read vals from csv
-    df = pd.read_csv("./data/emails_lemmatized_clustered.csv", sep=";")
+    df = pd.read_csv("../data/emails_lemmatized_clustered.csv", sep=";")
     df = df.rename(columns={"label": "cluster"})
     df = df.dropna()
     return df
